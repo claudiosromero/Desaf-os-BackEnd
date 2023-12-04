@@ -2,7 +2,7 @@ import { promises as fs } from "fs"
 
 // Realizar una clase de nombre “ProductManager”
 class ProductManager {
-    constructor() {
+    constructor(path) { //agregue path al constructor para la correccion 
         this.patch = "./producto.txt"
         // areglo para mantener productos
 
