@@ -3,7 +3,7 @@ import { promises as fs } from "fs"
 // Realizar una clase de nombre “ProductManager”
 class ProductManager {
     constructor(path) { //agregue path al constructor para la correccion 
-        this.patch = "./producto.txt"
+        this.path = "./producto.txt"
         // areglo para mantener productos
 
         this.products = []
@@ -36,13 +36,13 @@ class ProductManager {
 
         // console.log(newProduct)
 
-        await fs.writeFile(this.patch, JSON.stringify(this.products))
+        await fs.writeFile(this.path, JSON.stringify(this.products))
     }
 
     //consulta de producto y ID
 
     readProducts = async () => {
-        let lectura = await fs.readFile(this.patch, "utf-8")
+        let lectura = await fs.readFile(this.path, "utf-8")
 
         return JSON.parse(lectura)
     }
@@ -73,7 +73,7 @@ class ProductManager {
         let filter = filtrarId.filter(products => products.id != id)
 
         //reescribe el archivo
-        await fs.writeFile(this.patch, JSON.stringify(filter))
+        await fs.writeFile(this.path, JSON.stringify(filter))
 
         console.log("PRODUCTO ELIMINADO")
 
@@ -89,7 +89,7 @@ class ProductManager {
 
         let prductoModificadido = [
             { ...producto, id }, ...productEliminado]
-        await fs.writeFile(this.patch, JSON.stringify(prductoModificadido))
+        await fs.writeFile(this.path, JSON.stringify(prductoModificadido))
     }
 
 }
