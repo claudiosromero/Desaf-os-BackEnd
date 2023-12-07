@@ -1,7 +1,7 @@
 import { promises as fs } from "fs"
 
 // Realizar una clase de nombre “ProductManager”
-class ProductManager {
+export default class ProductManager {
     constructor(path) { //agregue path al constructor para la correccion 
         this.path = "./producto.txt"
         // areglo para mantener productos
@@ -98,13 +98,20 @@ class ProductManager {
 
 
 //ejecucion
-const productos = new ProductManager
+//const productos = new ProductManager
 
 
 //Envio de parametros
 /*productos.addProduct("Producto1", "Descripcion1", 2000, "Foto1", "code01", 100)
-productos.addProduct("Producto2", "Descripcion2", 1000, "Foto2", "code01", 90)
-productos.addProduct("Producto3", "Descripcion3", 3000, "Foto3", "code01", 150)*/
+productos.addProduct("Producto2", "Descripcion2", 1000, "Foto2", "code02", 90)
+productos.addProduct("Producto3", "Descripcion3", 3000, "Foto3", "code03", 150)
+productos.addProduct("Producto4", "Descripcion4", 5000, "Foto4", "code04", 150)
+productos.addProduct("Producto5", "Descripcion5", 4000, "Foto5", "code05", 150)
+productos.addProduct("Producto6", "Descripcion6", 6000, "Foto6", "code06", 150)
+productos.addProduct("Producto7", "Descripcion7", 7000, "Foto7", "code07", 150)
+productos.addProduct("Producto8", "Descripcion8", 8000, "Foto8", "code08", 150)
+productos.addProduct("Producto9", "Descripcion9", 1500, "Foto9", "code09", 150)
+productos.addProduct("Producto10", "Descripcion10", 3400, "Foto10", "code10", 150)*/
 
 //TODOS LOS PRODUCTOS
 //productos.getProducts()
@@ -115,7 +122,7 @@ productos.addProduct("Producto3", "Descripcion3", 3000, "Foto3", "code01", 150)*
 //BORRAR POR ID
 //productos.deleteProdutcsById(2)
 
-productos.updateProducts({
+/*productos.updateProducts({
     title: 'Producto1',
     description: 'Descripcion1',
     price: 5000,
@@ -123,4 +130,4 @@ productos.updateProducts({
     code: 'code01',
     stock: 100,
     id: 3
-})
+})*/
